@@ -6,40 +6,22 @@ const router = Router();
 
 
 //____________________________________________ login _____________________________________ //
-router.get('/login', (req, res) => {
-    res.render('./partials/login')
-})
-
-router.get('/errorLogin', (req, res) => {
-    res.render('./partials/errorLogin')
-})
-
-router.get('/form', authMiddleware,(req, res) => {
-    user= req.session.user
-    res.render('./partials/form', {user})
-})
 
 router.post('/login', passport.authenticate('login',{ 
-    failureRedirect: '/api/session/errorLogin',}),
+    failureRedirect: '',}),
     (req, res) => {
     const {username} = req.body
     req.session.user = username;
-    res.redirect('/api/session/form')
+    res.status(200).json(message = `Sesion iniciada. Bienvenido ${username}`)
 })
 
 //____________________________________________ register _____________________________________ //
 
-router.get('/register', (req, res) => {
-    res.render('./partials/register')
-})
-router.get('/errorRegister', (req, res) => {
-    res.render('./partials/errorSignUp')
-})
-
-router.post('/register', passport.authenticate('signup', {
-    successRedirect: '/api/session/login',
-    failureRedirect: '/api/session/errorRegister',
-}))
+router.post('/register', passport.authenticate('signup', {}), 
+    (req, res)=>{
+        res.status(200).json(req.body)
+    }
+)
 //____________________________________________ logout _____________________________________ //
 
 router.get('/logout', (req, res) => {

@@ -1,0 +1,38 @@
+[2023-03-03T19:48:58.501] [ERROR] custom - The Cart whit ID: 1 was not found
+[2023-03-03T19:49:16.233] [ERROR] custom - The Cart whit ID: 1 was not found
+[2023-03-03T20:21:49.464] [ERROR] custom - The Cart whit ID: 1 was not found
+[2023-03-03T20:22:33.517] [ERROR] custom - The Cart whit ID: 640278a61d41cadbb1b738fc was not found
+[2023-03-03T20:24:10.745] [ERROR] custom - The Cart whit ID: 640278a61d41cadbb1b738fc was not found
+[2023-03-04T17:28:34.833] [ERROR] custom - ReferenceError: productsDb is not defined
+[2023-03-04T17:32:49.340] [ERROR] custom - ReferenceError: contenedor is not defined
+[2023-03-04T17:33:09.270] [ERROR] custom - TypeError: Assignment to constant variable.
+[2023-03-04T17:33:30.662] [ERROR] custom - TypeError: Assignment to constant variable.
+[2023-03-04T17:55:47.362] [ERROR] custom - Error: ReferenceError: carrito is not defined
+[2023-03-04T17:57:46.382] [ERROR] custom - Error: TypeError: Cannot read properties of undefined (reading 'getById')
+[2023-03-04T17:58:19.165] [ERROR] custom - Error: TypeError: Cannot read properties of undefined (reading 'getById')
+[2023-03-04T17:59:04.278] [ERROR] custom - Error: TypeError: productsInCart is not iterable
+[2023-03-04T17:59:24.497] [ERROR] custom - Error: TypeError: productsInCart is not iterable
+[2023-03-04T17:59:49.483] [ERROR] custom - there was a problem deleting the product
+[2023-03-04T18:00:35.830] [ERROR] custom - there was a problem deleting the product
+[2023-03-04T18:00:56.293] [ERROR] custom - there was a problem deleting the product
+[2023-03-04T18:03:10.614] [ERROR] custom - there was a problem deleting the product
+[2023-03-04T18:03:53.435] [ERROR] custom - there was a problem deleting the product
+[2023-03-04T18:07:58.387] [ERROR] custom - Error: TypeError: Cannot read properties of undefined (reading 'findIndex')
+[2023-03-04T18:08:33.816] [ERROR] custom - Error: TypeError: Cannot read properties of undefined (reading 'findIndex')
+[2023-03-04T18:09:07.535] [ERROR] custom - Error: TypeError: Cannot read properties of undefined (reading 'findIndex')
+[2023-03-04T18:09:34.388] [ERROR] custom - Error: TypeError: Cannot read properties of undefined (reading 'findIndex')
+[2023-03-04T18:10:08.199] [ERROR] custom - Error: ReferenceError: res is not defined
+[2023-03-04T18:10:35.637] [ERROR] custom - Error: ReferenceError: res is not defined
+[2023-03-04T18:10:46.090] [ERROR] custom - there was a problem deleting the product
+[2023-03-04T18:11:17.400] [ERROR] custom - there was a problem deleting the product
+[2023-03-04T18:12:18.653] [ERROR] custom - there was a problem deleting the product
+[2023-03-04T18:12:39.526] [ERROR] custom - there was a problem deleting the product
+[2023-03-04T18:17:09.522] [ERROR] custom - there was a problem deleting the product
+[2023-03-04T18:20:00.710] [ERROR] custom - Error: TypeError: Assignment to constant variable.
+[2023-03-04T18:20:29.734] [ERROR] custom - Error: TypeError: Assignment to constant variable.
+[2023-03-04T18:53:41.695] [ERROR] custom - ReferenceError: username is not defined
+[2023-03-04T18:55:00.655] [ERROR] custom - you need to login
+[2023-03-04T19:40:53.702] [ERROR] custom - you need to login
+[2023-03-04T19:42:56.213] [ERROR] custom - you need to login
+[2023-03-04T19:45:12.187] [ERROR] custom - you need to login
+[2023-03-04T20:05:07.610] [ERROR] custom - you need to login

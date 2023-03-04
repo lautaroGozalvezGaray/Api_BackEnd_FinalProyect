@@ -54,7 +54,7 @@ const initPassport = () => {
                 return done(null, false, { message: 'User already exists' })
             }
             const { admin } = req.body;
-            const {name, adress, age, phone, avatar} = req.body;
+            const {name, adress, age, phone,email, avatar} = req.body;
             
             const newUser = {
                 id: allUsers.length + 1,
@@ -64,6 +64,7 @@ const initPassport = () => {
                 adress:adress,
                 age: age,
                 phone: phone,
+                email: email,
                 avatar:avatar
             }
             users.save(newUser);

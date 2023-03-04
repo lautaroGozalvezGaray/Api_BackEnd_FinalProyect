@@ -10,17 +10,26 @@ const product = new ProductsDaoMongoDb();
 
 const createNewCart = async(req, res) =>{
     try {
-        const {body} = req;
+        user= req.session.user
 
-        body.timestamp = moment().format('MMMM Do YYYY, h:mm:ss a');
-        body.products = [];
+        if(user){
+            const {body} = req;
 
-        const newCart = await carrito.save(body);
-        console.log(newCart);
-        newCart
-          ? res.status(200).json({success : "cart added with ID: "+ newCart._id})
-          : res.status(404).send(logger.error("There are no products"));
+            body.user = user;
+            body.timestamp = moment().format('MMMM Do YYYY, h:mm:ss a');
+            body.products = [];
 
+            const newCart = await carrito.save(body);
+            console.log(newCart);
+            newCart
+                ? res.status(200).json({success : "cart added with ID: "+ newCart._id})
+                : res.status(404).send(logger.error("There was an error creating the cart"));
+        }else{
+            res.status(404).json({messagge : "you need to login"})
+            res.status(404).send(logger.error("you need to login"));
+        }
+
+        
     } catch (error) {
         return res.status(500).send(logger.error(`${error}`))
     }
@@ -29,11 +38,21 @@ const createNewCart = async(req, res) =>{
 const deleteCart = async(req, res) =>{
     try {
 
-        const {id} = req.params;
+        user= req.session.user
 
-        await carrito.deleteById(id);
+        if(user){
 
-        res.status(200).json({mensaje: `Cart whit ID : ${id} was deleted successfully`});
+            const {id} = req.params;
+
+            await carrito.deleteById(id);
+
+            res.status(200).json({mensaje: `Cart whit ID : ${id} was deleted successfully`});
+
+            
+        }else{
+            res.status(404).json({messagge : "you need to login"})
+            res.status(404).send(logger.error("you need to login"));
+        }
 
     } catch (error) {
         return res.status(500).send(logger.error(`${error}`))
@@ -43,13 +62,25 @@ const deleteCart = async(req, res) =>{
 const productsFromCart = async(req, res) =>{
     try {
 
-        const {id} = req.params;
-        const cart = await carrito.getById(id);
-        
-        cart 
-          ? res.status(200).json({cart_number: id, "Products ": cart.products.length>0 ? cart.products : "There aren't products"})
-           
-          : res.status(404).send(logger.error(`The Cart whit ID: ${id} was not found`));
+        user= req.session.user
+
+        if(user){
+            const productsDb = null;
+            const {id} = req.params;
+            const cart = await carrito.getById(id);
+            const productsInCart = cart.products;
+            console.log(productsInCart)
+            
+            console.log(productsDb);
+            
+            cart 
+            ? res.status(200).json({cart_number: id, "Products ": cart.products.length>0 ? cart.products : "There aren't products"})
+            
+            : res.status(404).send(logger.error(`The Cart whit ID: ${id} was not found`));
+        }else{
+            res.status(404).json({messagge : "you need to login"})
+            res.status(404).send(logger.error("you need to login"));
+        }
 
     } catch (error) {
         return res.status(500).send(logger.error(`${error}`))
@@ -59,21 +90,35 @@ const productsFromCart = async(req, res) =>{
 const addProductToCart = async(req, res) =>{
     try {
 
-        const {id}= req.params;
-        const {body} = req;
+        user= req.session.user
 
-        const newProducts = await product.getById(body.id)
-        console.log(newProducts);
+        if(user){
 
-        if(newProducts){
-            let productAdded = await carrito.updateById(id, { products: newProducts })
-            console.log(productAdded);
-            productAdded
-            ? res.status(200).json({Success: "Product added"})
-            : res.status(404).send(logger.error("there was a problem adding the product"))
-    
+            const {id}= req.params;
+            const {body} = req;
+
+            const carritoData = await carrito.getById(id);
+
+            const existingProducts = carritoData.products;
+
+            const newProducts = [...existingProducts, body];
+
+            console.log(newProducts);
+
+            if(newProducts){
+                let productAdded = await carrito.updateById(id, { products: newProducts })
+                console.log(productAdded);
+                productAdded
+                ? res.status(200).json({Success: "Product added"})
+                : res.status(404).send(logger.error("there was a problem adding the product"))
+        
+            }else{
+                res.status(404).send(logger.error("the product was not found"));
+            }
+            
         }else{
-            res.status(404).send(logger.error("the product was not found"));
+            res.status(404).json({messagge : "you need to login"})
+            res.status(404).send(logger.error("you need to login"));
         }
 
     } catch (error) {
@@ -83,13 +128,22 @@ const addProductToCart = async(req, res) =>{
 
 const deleteProductFromCart = async(req, res) =>{
     try {
-        const {id} = req.params;
-        const {id_prod} = req.params;
-        const deleteProduct = await carrito.deleteProductFromCart(id, id_prod);
-        console.log(deleteProduct);
-        deleteProduct
-        ? res.status(200).json({Success: "Product succesfully deleted"})
-        : res.status(404).send(logger.error("there was a problem deleting the product"))
+
+        user= req.session.user
+
+        if(user){
+
+            const {id} = req.params;
+            const {id_prod} = req.params;
+            let deleteProduct = await carrito.deleteProductFromCart(id, id_prod);
+            deleteProduct
+            ? res.status(200).json({Success: "Product succesfully deleted"})
+            : res.status(404).send(logger.error("there was a problem deleting the product"))
+                
+        }else{
+            res.status(404).json({messagge : "you need to login"})
+            res.status(404).send(logger.error("you need to login"));
+        }
 
 
     } catch (error) {
@@ -97,24 +151,4 @@ const deleteProductFromCart = async(req, res) =>{
     }
 }
 
-const sendOrder = async(req, res) =>{
-    const {id} = req.params;
-    const cart = await carrito.getById(id);
-    let total;
-    for (const prod in cart.product) {
-        total =+ prod.price;
-    }
-
-    sendMail(`Nuevo pedido de ${req.session.name}, ${req.session.username}.`, cart.products, `Total: $${total}`, req.session.phone);
-    sendWhatsApp(`Nuevo pedido de ${req.session.name}`, JSON.stringify(currentCart.products), total)
-
-    await cart.deleteById(id)
-
-    res.redirect("/api/session/form")
-}
-
-
-
-
-
-module.exports= {createNewCart, deleteCart, productsFromCart, addProductToCart, deleteProductFromCart, sendOrder}
+module.exports= {createNewCart, deleteCart, productsFromCart, addProductToCart, deleteProductFromCart}

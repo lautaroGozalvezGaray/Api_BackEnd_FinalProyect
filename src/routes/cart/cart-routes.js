@@ -23,9 +23,5 @@ routerCart.post("/:id/products", addProductToCart);
 
 routerCart.delete("/:id/products/:id_prod", deleteProductFromCart);
 
-//PARA CONFIRMAR LA ORDEN Y MANDAR EL EMAIL Y EL WAHTSAPP
-
-routerCart.post("/:id/send-order", sendOrder);
-
 
 module.exports = routerCart;

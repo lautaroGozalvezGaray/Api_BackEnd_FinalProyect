@@ -10,9 +10,10 @@ module.exports = class MongoDbContainer{
     async connect(){
         try {
             mongoose.connect(process.env.MONGO_URL_DB, {useNewUrlParser: true, useUnifiedTopology: true, })
-            //console.log("base de datos conectada");
+            console.log("base de datos conectada");
         } catch (error) {
             console.log(error);
+            throw new Error('Error a la hora de iniciar la base de datos');
         }
         
     }
@@ -41,6 +42,18 @@ module.exports = class MongoDbContainer{
                 _id : objectId
             })
             //console.log(product);
+            return product;
+        } catch (error) {
+            console.log(error);
+            return false;
+        }
+    }
+
+    async getByUsername(objectUser) {
+        try {
+            const product = await this.model.findOne({
+                user : objectUser
+            })
             return product;
         } catch (error) {
             console.log(error);
