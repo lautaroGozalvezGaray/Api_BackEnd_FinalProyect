@@ -20,7 +20,6 @@ const createNewCart = async(req, res) =>{
             body.products = [];
 
             const newCart = await carrito.save(body);
-            console.log(newCart);
             newCart
                 ? res.status(200).json({success : "cart added with ID: "+ newCart._id})
                 : res.status(404).send(logger.error("There was an error creating the cart"));
@@ -69,9 +68,6 @@ const productsFromCart = async(req, res) =>{
             const {id} = req.params;
             const cart = await carrito.getById(id);
             const productsInCart = cart.products;
-            console.log(productsInCart)
-            
-            console.log(productsDb);
             
             cart 
             ? res.status(200).json({cart_number: id, "Products ": cart.products.length>0 ? cart.products : "There aren't products"})
@@ -103,11 +99,8 @@ const addProductToCart = async(req, res) =>{
 
             const newProducts = [...existingProducts, body];
 
-            console.log(newProducts);
-
             if(newProducts){
                 let productAdded = await carrito.updateById(id, { products: newProducts })
-                console.log(productAdded);
                 productAdded
                 ? res.status(200).json({Success: "Product added"})
                 : res.status(404).send(logger.error("there was a problem adding the product"))

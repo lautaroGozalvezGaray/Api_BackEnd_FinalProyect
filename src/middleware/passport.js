@@ -44,7 +44,6 @@ const initPassport = () => {
             passReqToCallback: true
         },
         async(req, username, password, done) => {
-            console.log(username);
             const allUsers = await users.getAll();
             let user = allUsers.find(u => u.username === username)
             console.log('register', users)

@@ -1,4 +1,4 @@
-
+const logger = require("../../utils/Log4js");
 const mongoose = require('mongoose');
 
 module.exports = class MongoDbContainer{
@@ -10,9 +10,9 @@ module.exports = class MongoDbContainer{
     async connect(){
         try {
             mongoose.connect(process.env.MONGO_URL_DB, {useNewUrlParser: true, useUnifiedTopology: true, })
-            console.log("base de datos conectada");
+            logger.info("base de datos conectada")
         } catch (error) {
-            console.log(error);
+            logger.error("you need to login");
             throw new Error('Error a la hora de iniciar la base de datos');
         }
         
@@ -22,7 +22,7 @@ module.exports = class MongoDbContainer{
         try {
             return await this.model.findById(id);
         } catch (error) {
-            console.log(error);
+            logger.error(error)
         }
     }
 
@@ -31,7 +31,7 @@ module.exports = class MongoDbContainer{
             
             return await this.model.find();
         } catch (error) {
-            console.log(error);
+            logger.error(error)
             return false;
         }
     }
@@ -44,7 +44,7 @@ module.exports = class MongoDbContainer{
             //console.log(product);
             return product;
         } catch (error) {
-            console.log(error);
+            logger.error(error)
             return false;
         }
     }
@@ -56,7 +56,7 @@ module.exports = class MongoDbContainer{
             })
             return product;
         } catch (error) {
-            console.log(error);
+            logger.error(error)
             return false;
         }
     }
@@ -65,7 +65,7 @@ module.exports = class MongoDbContainer{
         try {
             return await this.model.create(object)
         } catch (error) {
-            console.log(error);
+            logger.error(error)
             return false;
         }
     }
@@ -74,7 +74,7 @@ module.exports = class MongoDbContainer{
         try {
             return await this.model.findByIdAndDelete({_id: id})
         } catch (error) {
-            console.log(error);
+            logger.error(error)
             return false;
         }
     }
@@ -83,7 +83,7 @@ module.exports = class MongoDbContainer{
         try {
             return await this.model.updateOne({_id:id}, {$set:data});
         } catch (error) {
-            console.log(error);
+            logger.error(error)
         }
     }
 

@@ -42,8 +42,6 @@ const sendOrder = async(req, res) =>{
                 email: userDates.email
             }
 
-            console.log(generateOrder)
-
             order.save(generateOrder);
             
             sendEmail(generateOrder);
