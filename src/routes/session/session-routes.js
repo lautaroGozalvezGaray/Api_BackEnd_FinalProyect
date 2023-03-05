@@ -25,9 +25,10 @@ router.post('/register', passport.authenticate('signup', {}),
 //____________________________________________ logout _____________________________________ //
 
 router.get('/logout', (req, res) => {
+    user = req.session.user
     req.session.destroy(err =>{
-        if(err) return res.send(err)
-        res.redirect('/api/session/login')
+        if(err) return  res.status(400).json(message = `Error al cerrar sesion`)
+        res.status(200).json(message = `Hasta luego ${user}. Vuelvas Prontos`)
     })
 })
 module.exports=router;
