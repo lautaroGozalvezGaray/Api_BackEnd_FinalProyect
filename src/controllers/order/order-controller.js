@@ -2,6 +2,7 @@ const CartDaoMongoDb = require("../../data_Persistence/daos/cart/cartDaoMongoDb"
 const OrdersDaoMongoDb = require("../../data_Persistence/daos/order/ordersDaoMongoDd");
 const UsersDaoMongoDb = require("../../data_Persistence/daos/users/usersDaoMongoDb");
 const logger = require("../../utils/Log4js");
+const {sendEmail} = require("../../utils/nodemailer")
 
 const carrito = new CartDaoMongoDb();
 const order = new OrdersDaoMongoDb();
@@ -44,8 +45,8 @@ const sendOrder = async(req, res) =>{
             console.log(generateOrder)
 
             order.save(generateOrder);
-            //sendMail(`Nuevo pedido de ${req.session.name}, ${req.session.username}.`, cart.products, `Total: $${total}`, req.session.phone);
-            ///sendWhatsApp(`Nuevo pedido de ${req.session.name}`, JSON.stringify(currentCart.products), total)
+            
+            sendEmail(generateOrder);
 
             const idCart = cart.id;
 
@@ -59,9 +60,6 @@ const sendOrder = async(req, res) =>{
         }else{
             res.status(404).json({messagge : "no products added to cart"})
         }
-
-        
-
     }else{
         res.status(404).json({messagge : "you need to login"})
         res.status(404).send(logger.error("you need to login"));

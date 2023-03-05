@@ -17,6 +17,7 @@ const { initPassport } = require('./src/middleware/passport')
 const MongoStore = require("connect-mongo");
 const initSocket = require("./src/utils/initSocket.js");
 const routerOrder = require("./src/routes/order/order-routes.js");
+const routerChat = require("./src/routes/messages/messages-routes.js");
 
 const advanceOptions = {useNewUrlParser: true, useUnifiedTopology:true}
 
@@ -68,6 +69,7 @@ app.use("/api/carrito", cartRoutes);
 app.use("/api/info", infoRoutes);
 app.use("/api/info", infoAccountRoutes);
 app.use("/api/order", routerOrder)
+app.use("/api/chat", routerChat)
 
 app.get("/", (req, res) => {
     res.redirect('/api/session/login')

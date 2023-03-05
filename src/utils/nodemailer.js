@@ -4,18 +4,18 @@ const transporter = nodemailer.createTransport({
     host: 'smtp.ethereal.email',
     port: 587,
     auth: {
-        user: 'lura.haag87@ethereal.email',
-        pass: 'kRzkpCHeUTFTacG4rk'
+        user: 'lucius.quitzon@ethereal.email',
+        pass: 'H1n4Ku411zHBgX2tA6'
     }
 });
 
-sendMail = async (subject, data, extra = '') => {
+sendEmail = async (data) => {
     const content = JSON.stringify(data)
     const mailOptions = {
         from: 'Ecommerce NodeJS',
         to: process.env.NODEMAILER_EMAIL_TO,
-        subject: subject,
-        html: `<h2>Datos recibidos:</h2><pre>${content}</pre><p>${extra}</p>`
+        subject: "Orden de compra generada",
+        html: `<h2>Datos recibidos:</h2><pre>${content}`
     }
 
     try {
@@ -26,4 +26,4 @@ sendMail = async (subject, data, extra = '') => {
     }
 }
 
-module.exports = sendMail;
+module.exports = {sendEmail};

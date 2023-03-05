@@ -17,18 +17,4 @@ router.get('/', (_req, res) => {
     res.status(200).json(processInfo);
 })
 
-const randomNumbersGeneratorFork = fork('./src/utils/randomNumbersGenerator.js')
-//console.log('../../utils/randomNumbersGenerator.js');
-
-router.get('/randoms', (req, res) => {
-    
-    const cant = req.query.cant || 100000000;
-    
-    randomNumbersGeneratorFork.on('message', resultado => {
-        res.status(200).json(resultado);
-    })
-    randomNumbersGeneratorFork.send(cant);
-    
-})
-
 module.exports=router;
