@@ -15,7 +15,7 @@ sendEmail = async (data) => {
         from: 'Ecommerce NodeJS',
         to: process.env.NODEMAILER_EMAIL_TO,
         subject: "Orden de compra generada",
-        html: `<h2>Datos recibidos:</h2><pre>${content}`
+        html: `<h2>Datos recibidos:</h2><pre>${content}</pre>`
     }
 
     try {
