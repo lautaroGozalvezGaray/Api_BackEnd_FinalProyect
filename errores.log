@@ -1,1 +1,68 @@
 [2023-03-05T11:34:34.972] [ERROR] custom - you need to login
+[2023-03-05T16:36:52.154] [ERROR] custom - you need to login
+[2023-03-05T17:12:24.035] [ERROR] custom - {
+  error: ReferenceError: req is not defined
+      at getInfoAccount (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\src\controllers\infoAccount\infoAccount-controller.js:9:29)
+      at Layer.handle [as handle_request] (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\express\lib\router\route.js:144:13)
+      at Route.dispatch (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\express\lib\router\route.js:114:3)
+      at Layer.handle [as handle_request] (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\express\lib\router\layer.js:95:5)
+      at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\express\lib\router\index.js:284:15
+      at Function.process_params (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\express\lib\router\index.js:346:12)
+      at next (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\express\lib\router\index.js:280:10)
+      at Function.handle (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\express\lib\router\index.js:175:3)
+      at router (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\express\lib\router\index.js:47:12)
+}
+[2023-03-05T17:14:00.785] [ERROR] custom - {
+  error: ReferenceError: req is not defined
+      at getInfoAccount (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\src\controllers\infoAccount\infoAccount-controller.js:9:29)
+      at Layer.handle [as handle_request] (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\express\lib\router\route.js:144:13)
+      at Route.dispatch (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\express\lib\router\route.js:114:3)
+      at Layer.handle [as handle_request] (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\express\lib\router\layer.js:95:5)
+      at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\express\lib\router\index.js:284:15
+      at Function.process_params (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\express\lib\router\index.js:346:12)
+      at next (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\express\lib\router\index.js:280:10)
+      at Function.handle (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\express\lib\router\index.js:175:3)
+      at router (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\express\lib\router\index.js:47:12)
+}
+[2023-03-05T17:16:17.078] [ERROR] custom - {
+  error: TypeError: Assignment to constant variable.
+      at getInfoAccount (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\src\controllers\infoAccount\infoAccount-controller.js:12:14)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+}
+[2023-03-05T17:16:37.131] [ERROR] custom - {
+  error: TypeError: Assignment to constant variable.
+      at getInfoAccount (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\src\controllers\infoAccount\infoAccount-controller.js:12:14)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+}
+[2023-03-05T18:20:47.663] [ERROR] custom - you need to login
+[2023-03-05T18:23:06.284] [ERROR] custom - ReferenceError: user is not defined
+[2023-03-05T18:59:51.393] [ERROR] custom - TypeError: Cannot read properties of null (reading 'products')
+[2023-03-05T19:00:51.566] [ERROR] custom - TypeError: Cannot read properties of null (reading 'products')
+[2023-03-05T19:01:13.286] [ERROR] custom - TypeError: Cannot read properties of null (reading 'products')
+[2023-03-05T19:01:49.891] [ERROR] custom - TypeError: Cannot read properties of null (reading 'products')
+[2023-03-05T19:02:01.114] [ERROR] custom - The Cart whit ID: 6404a3821f30c0fd3183db97 was not found
+[2023-03-05T19:03:29.310] [ERROR] custom - The Cart whit ID: 6404a3821f30c0fd3183db97 was not found
+[2023-03-05T19:04:24.222] [ERROR] custom - CastError: Cast to ObjectId failed for value "6405113e6e456001a33684c" (type string) at path "_id" for model "carts"
+    at model.Query.exec (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4891:21)
+    at model.Query.Query.then (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4990:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: '"6405113e6e456001a33684c"',
+  kind: 'ObjectId',
+  value: '6405113e6e456001a33684c',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:5319:12),
+  valueType: 'string'
+}

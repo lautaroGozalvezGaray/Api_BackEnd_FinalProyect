@@ -2,27 +2,20 @@ const logger = require("../../utils/Log4js");
 
 const usersDaoMongoDb = require("../../data_Persistence/daos/users/usersDaoMongoDb");
 
-const getInfoAccount = async() =>{
+const getInfoAccount = async(req, res) =>{
     try {
-        const user = new usersDaoMongoDb();
+        let user = new usersDaoMongoDb();
 
-        const userSession = req.session.user;
+        let userSession = req.session.user;
 
         const allUsers = await user.getAll();
         user = allUsers.find( user => user.username === userSession );
 
-        req.session.name= user.name;
-        req.session.adress= user.adress;
-        req.session.age= user.age;
-        req.session.phone = user.phone;
-        req.session.avatar= user.avatar;
+        res.status(200).json(UserDates= {user})
 
-        newCart
-          ? null
-          : res.status(404).send(logger.error("The user doesnt exist"));
 
     } catch (error) {
-        return res.status(500).send(logger.error(`${error}`))
+        logger.error({error})
     }
 
 }

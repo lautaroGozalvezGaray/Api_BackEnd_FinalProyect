@@ -4,7 +4,6 @@ const session = require("express-session");
 const sessionRoutes = require("./src/routes/session/session-routes.js")
 const productRoutes = require("./src/routes/products/products-routes.js")
 const cartRoutes = require("./src/routes/cart/cart-routes.js");
-const infoRoutes = require("./src/routes/info/info-routes.js");
 const infoAccountRoutes = require("./src/routes/infoAccount/infoAccount-routes");
 const cookieParser = require('cookie-parser')
 const hbs = require('express-handlebars')
@@ -66,7 +65,6 @@ app.use(express.static('public'));
 app.use("/api/session", sessionRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/carrito", cartRoutes);
-app.use("/api/info", infoRoutes);
 app.use("/api/info", infoAccountRoutes);
 app.use("/api/order", routerOrder)
 app.use("/api/chat", routerChat)

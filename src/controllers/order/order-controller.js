@@ -12,55 +12,49 @@ const sendOrder = async(req, res) =>{
 
     const userSession = req.session.user
 
-    if(userSession){
+    //traigo el user
+    const allUsers = await user.getAll();
+    let userDates = allUsers.find( user => user.username === userSession ) 
 
-        //traigo el user
-        const allUsers = await user.getAll();
-        let userDates = allUsers.find( user => user.username === userSession ) 
+    //traigo el carrito de user
+    const cart = await carrito.getByUsername(userSession);
 
-        //traigo el carrito de user
-        const cart = await carrito.getByUsername(userSession);
+    if(cart.products.length>0){
 
-        if(cart.products.length>0){
+        const productsInCart = cart.products;
 
-            const productsInCart = cart.products;
+        const orderNumber = Math.floor(Math.random() * 1000000000) + 10000;;
 
-            const orderNumber = Math.floor(Math.random() * 1000000000) + 10000;;
+        let total;
 
-            let total;
+        const status = "Generada"
 
-            const status = "Generada"
-
-            for (const prod in productsInCart) {
-                total =+ prod.price;
-            }
-
-            const generateOrder = {
-                items: productsInCart,
-                orderNumber: orderNumber,
-                status: status,
-                email: userDates.email
-            }
-
-            order.save(generateOrder);
-            
-            sendEmail(generateOrder);
-
-            const idCart = cart.id;
-
-            await carrito.deleteById(idCart)
-
-            res.status(200).json({
-                message : "Order sent successfully",
-                order: generateOrder
-            })
-
-        }else{
-            res.status(404).json({messagge : "no products added to cart"})
+        for (const prod in productsInCart) {
+            total =+ prod.price;
         }
+
+        const generateOrder = {
+            items: productsInCart,
+            orderNumber: orderNumber,
+            status: status,
+            email: userDates.email
+        }
+
+        order.save(generateOrder);
+        
+        sendEmail(generateOrder);
+
+        const idCart = cart.id;
+
+        await carrito.deleteById(idCart)
+
+        res.status(200).json({
+            message : "Order sent successfully",
+            order: generateOrder
+        })
+
     }else{
-        res.status(404).json({messagge : "you need to login"})
-        res.status(404).send(logger.error("you need to login"));
+        res.status(404).json({messagge : "no products added to cart"})
     }
 
 }

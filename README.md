@@ -2,11 +2,15 @@
 
 ## Ejecutar localmente
 
-- Para levantar el proyecto por console podemos simplemente con nodemon server.js
+- Primero se deben instalar dependencias.
+
+- Para levantar el proyecto por consola podemos simplemente con nodemon server.js
 
 - Para seleccionar un puerto a eleccion nodemon server.js -p 8080 (por defecto toma el puerto 8080)
 
 - Para ejecutar en modo CLUSTER server.js -m CLUSTER
+
+-ACLARACION: TODAS LAS RUTAS EXCEPTO LA /CHAT DEBEN SER TESTEADAS EN POSTMAN O SIMILAR. 
 
 
 # RUTAS
@@ -96,5 +100,7 @@
 
 - `http://localhost:8080/api/session/register`: Permite cerrar la sesion del usuario. Por defecto la sesion dura 5 minutos.(GET)
 
+## InfoAccount Rutes
 
+- `http://localhost:8080/api/info/infoAccount`: permite ver la informacion del usuario logeado.
  
