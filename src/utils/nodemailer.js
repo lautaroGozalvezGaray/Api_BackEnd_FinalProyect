@@ -1,4 +1,5 @@
 const nodemailer = require("nodemailer");
+const logger = require("../utils/Log4js");
 
 const transporter = nodemailer.createTransport({
     host: 'smtp.ethereal.email',
@@ -20,9 +21,9 @@ sendEmail = async (data) => {
 
     try {
         const info = await transporter.sendMail(mailOptions)
-        console.log(info)
+        logger.info(info)
     } catch (err) {
-        console.log(err)
+        logger.error(err)
     }
 }
 

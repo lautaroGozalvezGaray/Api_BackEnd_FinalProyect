@@ -53,7 +53,6 @@ module.exports = class MongoDbContainer{
             const product = await this.model.findOne({
                 _id : objectId
             })
-            //console.log(product);
             return product;
         } catch (error) {
             logger.error(error)

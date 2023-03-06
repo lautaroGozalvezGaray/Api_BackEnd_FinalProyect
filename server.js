@@ -18,7 +18,7 @@ const options = {
 
 const { PORT } = minimist(process.argv.slice(2), options);
 const { MODE } = minimist(process.argv.slice(3), options);
-console.log(PORT);
+logger.info(PORT);
 if (MODE == 'CLUSTER' && cluster.isPrimary) {
     logger.info(`Threads: ${numCPUs}`)
     for (let aux = 0; aux < numCPUs; aux++)
@@ -35,7 +35,7 @@ if (MODE == 'CLUSTER' && cluster.isPrimary) {
 
     //listener
     httpServer.listen(PORT, () => {
-        console.log(`Server started at http://localhost:${PORT}`);
+        logger.info(`Server started at http://localhost:${PORT}`);
     })
 }
 

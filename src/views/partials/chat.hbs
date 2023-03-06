@@ -91,8 +91,6 @@
     
     //escucha la lista actualizada cuando se carga un mensaje del servidor y lo muestra en la plantilla
     socket.on('listaMensajesActualizada', (data) => {
-        //console.log(data);
-        
         const mensasjes = data.map(item => `<li style= "color: brown ; list-style:none" > <b style= "color: blue">${item.email}</b>  [${item.timestrap}]:  <i style= "color: green">${item.message}</i></li>`);
         const ul = document.getElementById("messages");
         ul.innerHTML=mensasjes.join("")
@@ -102,7 +100,6 @@
     
     //escucha la lista de mensajes guardadas desde el servidor y los muestra
     socket.on('listaMensajesBienvenida', (data) => {
-        //console.log(data);
         if(data.length>0){
             const mensasjes = data.map(item => `<li style= "color: brown ; list-style:none" > <b style= "color: blue">${item.email}</b>  [${item.timestrap}]:  <i style= "color: green">${item.message}</i></li>`);
             const ul = document.getElementById("messages");

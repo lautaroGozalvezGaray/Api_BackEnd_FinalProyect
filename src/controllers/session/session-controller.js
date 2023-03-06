@@ -2,6 +2,7 @@ const User = require("../../data_Persistence/daos/users/usersDaoMongoDb")
 const bCrypt = require('bcrypt');
 const generateToken = require("../../middleware/jsonWebToken");
 const users = new User();
+const logger = require("../../utils/Log4js");
 
 
 function createHash(password) {
@@ -15,11 +16,9 @@ const registerUser = async(req, res) =>{
     const {username, password} = req.body
 
     const allUsers = await users.getAll();
-    let user = allUsers.find(u => u.username === username)
-    console.log('register', users)
-    
+    let user = allUsers.find(u => u.username === username)    
     if (user) {
-        console.log('User already exists');
+        logger.info('User already exists');
         return res.status(400).json({erro:"User already exists" })
     }
 
@@ -62,8 +61,6 @@ const loginUser = async(req, res)=>{
     const usuario = {username, password}
 
     const access_token = generateToken(usuario)
-
-    console.log(access_token)
 
     req.session.authorization = access_token;
 

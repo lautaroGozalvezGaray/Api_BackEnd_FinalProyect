@@ -28,8 +28,6 @@ const loginUserChat = async(req, res)=>{
 
     const access_token = generateToken(usuario)
 
-    console.log(access_token)
-
     req.session.authorization = access_token;
 
     res.redirect('/api/chat')
@@ -37,7 +35,6 @@ const loginUserChat = async(req, res)=>{
 
 const renderChat = async (req,res)=>{
     const user= req.session.user
-    console.log(user)
     if(user){
       res.render("./partials/chat.hbs", {user})
     }else{
