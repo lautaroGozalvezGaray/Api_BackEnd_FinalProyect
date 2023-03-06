@@ -32,7 +32,7 @@
     "title": "",
     "price": 0000,
     "thumbnail": "",
-    "category":""
+    "categoria":""
    } 
    ```
 - `http://localhost:8080/api/carrito/:id/products/:id_prod`: Permite eliminar un producto dado su ID del carrito ID(POST)
@@ -58,7 +58,7 @@
     "title": "",
     "price": 00000,
     "thumbnail": "",
-    "category":""
+    "categoria":""
    } 
    ```
 
@@ -71,9 +71,11 @@
     "title": "",
     "price": 00000,
     "thumbnail": "",
-    "category":""
+    "categoria":""
    } 
    ```
+
+- `http://localhost:8080/api/products/categoria/:categoria`: Permite listar los productos por categoria (GET)
 
 ## Session Rutes
 
