@@ -1,6 +1,5 @@
 const express = require("express");
 const routerChat = express.Router();
-const passport = require('passport');
 const loginUserChat = require("../../controllers/messages/messages-controllers");
 
 //PARA RENDERIZAR EL CHAT
