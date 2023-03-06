@@ -35,4 +35,21 @@ const loginUserChat = async(req, res)=>{
     res.redirect('/api/chat')
 }
 
-module.exports = loginUserChat
+const renderChat = async (req,res)=>{
+    const user= req.session.user
+    console.log(user)
+    if(user){
+      res.render("./partials/chat.hbs", {user})
+    }else{
+      res.redirect('/api/chat/loginChat')
+    }
+}
+
+const logoutChat = async (req,res)=>{
+    req.session.destroy(err =>{
+        if(err) return res.send(err)
+        res.render('./partials/login')
+    })
+}
+
+module.exports ={loginUserChat, renderChat, logoutChat}
