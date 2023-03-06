@@ -23,21 +23,22 @@ const sendOrder = async(req, res) =>{
 
         const productsInCart = cart.products;
 
-        const orderNumber = Math.floor(Math.random() * 1000000000) + 10000;;
+        numberOfOrders = await order.getAll();
 
-        let total;
+        let total = 0;
 
         const status = "Generada"
 
-        for (const prod in productsInCart) {
-            total =+ prod.price;
+        for (let i = 0; i < productsInCart.length; i++) {
+            total += productsInCart[i].price;
         }
 
         const generateOrder = {
             items: productsInCart,
-            orderNumber: orderNumber,
+            orderNumber: numberOfOrders.length,
             status: status,
-            email: userDates.email
+            email: userDates.email,
+            total: total
         }
 
         order.save(generateOrder);

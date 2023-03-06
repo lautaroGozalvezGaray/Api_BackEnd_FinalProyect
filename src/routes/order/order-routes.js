@@ -1,6 +1,6 @@
 const express = require("express");
 const { sendOrder } = require("../../controllers/order/order-controller");
-const auth = require("../../middleware/authJwt");
+const {auth} = require("../../middleware/authJwt");
 
 
 const routerOrder = express.Router();

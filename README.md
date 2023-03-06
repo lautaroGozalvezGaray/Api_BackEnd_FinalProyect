@@ -10,6 +10,8 @@
 
 - Para ejecutar en modo CLUSTER server.js -m CLUSTER
 
+- Para pasarle la URL de la base de datos en mongo server.js -b URL
+
 -ACLARACION: TODAS LAS RUTAS EXCEPTO LA /CHAT DEBEN SER TESTEADAS EN POSTMAN O SIMILAR. 
 
 

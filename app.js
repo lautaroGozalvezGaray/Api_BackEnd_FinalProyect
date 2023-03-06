@@ -9,10 +9,6 @@ const cookieParser = require('cookie-parser')
 const hbs = require('express-handlebars')
 const { Server: HttpServer } = require("http");
 const { Server: IOServer } = require("socket.io");
-
-const passport = require('passport')
-const { initPassport } = require('./src/middleware/passport')
-
 const MongoStore = require("connect-mongo");
 const initSocket = require("./src/utils/initSocket.js");
 const routerOrder = require("./src/routes/order/order-routes.js");
@@ -53,9 +49,6 @@ app.use(session({
 
 initSocket(io);
 
-initPassport()
-app.use(passport.initialize())
-app.use(passport.session())
 app.use(cookieParser(process.env.SECRET_KEY_COOKIES));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
@@ -70,7 +63,7 @@ app.use("/api/order", routerOrder)
 app.use("/api/chat", routerChat)
 
 app.get("/", (req, res) => {
-    res.redirect('/api/session/login')
+    res.redirect('/api/chat')
 })
 
 

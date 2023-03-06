@@ -28,6 +28,32 @@ function auth(req, res, next) {
     next();
   });
 };
+
+function authChat(req, res, next) {
+
+  const authHeader = req.session.authorization;
+
+  console.log(authHeader)
+
+  if (!authHeader) {
+    return res.render("../views/partials/errorLogin.hbs")
+  }
+  
+  const token = authHeader
+
+  const PRIVATE_KEY = process.env.PRIVATE_KEY;
+  
+  jwt.verify(token, PRIVATE_KEY, (err, decoded) => {
+    console.log(err)
+    if (err) {
+      return res.render("../views/partials/errorLogin.hbs")
+
+    }
+    console.log(decoded.data)
+    req.user = decoded.data;
+    next();
+  });
+};
    
 
-module.exports = auth;
+module.exports = {auth, authChat};

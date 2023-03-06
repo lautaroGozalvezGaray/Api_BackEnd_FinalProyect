@@ -1,11 +1,12 @@
 const express = require("express");
 const routerChat = express.Router();
 const passport = require('passport');
+const loginUserChat = require("../../controllers/messages/messages-controllers");
 
 //PARA RENDERIZAR EL CHAT
 routerChat.get("/", (req, res) => {
     user= req.session.user
-    
+    console.log(user)
     if(user){
       res.render("./partials/chat.hbs", {user})
     }else{
@@ -20,13 +21,7 @@ routerChat.get('/loginChat', (req, res) => {
 
 //REGISTA EL LOGIN
 
-routerChat.post('/loginChat', passport.authenticate('login',{ 
-    failureRedirect: '',}),
-    (req, res) => {
-    const {username} = req.body
-    req.session.user = username;
-    res.redirect('/api/chat')
-}) 
+routerChat.post('/loginChat', loginUserChat)
 
 
 //PARA LOGOUT

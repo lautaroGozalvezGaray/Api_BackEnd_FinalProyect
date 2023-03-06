@@ -1,6 +1,6 @@
 const express = require("express");
 const getInfoAccount = require("../../controllers/infoAccount/infoAccount-controller");
-const auth = require("../../middleware/authJwt");
+const {auth} = require("../../middleware/authJwt");
 
 const routerinfoAccount = express.Router();
 

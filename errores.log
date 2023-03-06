@@ -66,3 +66,227 @@
       at model.Query.Query.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:5319:12),
   valueType: 'string'
 }
+[2023-03-06T08:37:16.224] [ERROR] custom - Error: orders validation failed: total: Cast to Number failed for value "NaN" (type number) at path "total", orderNumber: El orderNumber es obligatorio
+    at ValidationError.inspect (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:782:19)
+    at inspect (node:internal/util/inspect:347:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2167:40)
+    at Object.format (node:internal/util/inspect:2021:10)
+    at basicLayout (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\log4js\lib\appenders\logLevelFilter.js:10:7
+    at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>) {
+  errors: {
+    total: CastError: Cast to Number failed for value "NaN" (type number) at path "total"
+        at SchemaNumber.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schema\number.js:378:11)
+        at SchemaNumber.SchemaType.applySetters (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1201:12)
+        at model.$set (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:1410:22)
+        at model.$set (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:1135:16)
+        at model.Document (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:166:12)
+        at model.Model (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:121:12)
+        at new model (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:5038:15)
+        at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:3187:22
+        at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:3222:7
+        at Array.forEach (<anonymous>) {
+      stringValue: '"NaN"',
+      messageFormat: undefined,
+      kind: 'Number',
+      value: NaN,
+      path: 'total',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(!isNaN(val))
+      
+          at castNumber (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast\number.js:27:10)
+          at SchemaNumber.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schema\number.js:376:12)
+          at SchemaNumber.SchemaType.applySetters (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1201:12)
+          at model.$set (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:1410:22)
+          at model.$set (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:1135:16)
+          at model.Document (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:166:12)
+          at model.Model (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:121:12)
+          at new model (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:5038:15)
+          at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:3187:22
+          at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:3222:7 {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'number'
+    },
+    orderNumber: ValidatorError: El orderNumber es obligatorio
+        at validate (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1346:13)
+        at SchemaNumber.SchemaType.doValidate (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1330:7)
+        at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:2877:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'orderNumber',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'orders validation failed'
+}
+[2023-03-06T08:38:50.892] [ERROR] custom - Error: orders validation failed: total: Cast to Number failed for value "NaN" (type number) at path "total"
+    at ValidationError.inspect (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:782:19)
+    at inspect (node:internal/util/inspect:347:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2167:40)
+    at Object.format (node:internal/util/inspect:2021:10)
+    at basicLayout (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\log4js\lib\appenders\logLevelFilter.js:10:7
+    at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>) {
+  errors: {
+    total: CastError: Cast to Number failed for value "NaN" (type number) at path "total"
+        at SchemaNumber.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schema\number.js:378:11)
+        at SchemaNumber.SchemaType.applySetters (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1201:12)
+        at model.$set (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:1410:22)
+        at model.$set (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:1135:16)
+        at model.Document (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:166:12)
+        at model.Model (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:121:12)
+        at new model (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:5038:15)
+        at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:3187:22
+        at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:3222:7
+        at Array.forEach (<anonymous>) {
+      stringValue: '"NaN"',
+      messageFormat: undefined,
+      kind: 'Number',
+      value: NaN,
+      path: 'total',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(!isNaN(val))
+      
+          at castNumber (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast\number.js:27:10)
+          at SchemaNumber.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schema\number.js:376:12)
+          at SchemaNumber.SchemaType.applySetters (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1201:12)
+          at model.$set (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:1410:22)
+          at model.$set (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:1135:16)
+          at model.Document (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:166:12)
+          at model.Model (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:121:12)
+          at new model (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:5038:15)
+          at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:3187:22
+          at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:3222:7 {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'number'
+    }
+  },
+  _message: 'orders validation failed'
+}
+[2023-03-06T08:39:53.012] [ERROR] custom - Error: orders validation failed: total: Cast to Number failed for value "NaN" (type number) at path "total"
+    at ValidationError.inspect (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:782:19)
+    at inspect (node:internal/util/inspect:347:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2167:40)
+    at Object.format (node:internal/util/inspect:2021:10)
+    at basicLayout (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\log4js\lib\appenders\logLevelFilter.js:10:7
+    at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>) {
+  errors: {
+    total: CastError: Cast to Number failed for value "NaN" (type number) at path "total"
+        at SchemaNumber.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schema\number.js:378:11)
+        at SchemaNumber.SchemaType.applySetters (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1201:12)
+        at model.$set (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:1410:22)
+        at model.$set (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:1135:16)
+        at model.Document (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:166:12)
+        at model.Model (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:121:12)
+        at new model (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:5038:15)
+        at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:3187:22
+        at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:3222:7
+        at Array.forEach (<anonymous>) {
+      stringValue: '"NaN"',
+      messageFormat: undefined,
+      kind: 'Number',
+      value: NaN,
+      path: 'total',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(!isNaN(val))
+      
+          at castNumber (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast\number.js:27:10)
+          at SchemaNumber.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schema\number.js:376:12)
+          at SchemaNumber.SchemaType.applySetters (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1201:12)
+          at model.$set (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:1410:22)
+          at model.$set (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:1135:16)
+          at model.Document (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:166:12)
+          at model.Model (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:121:12)
+          at new model (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:5038:15)
+          at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:3187:22
+          at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:3222:7 {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'number'
+    }
+  },
+  _message: 'orders validation failed'
+}
+[2023-03-06T08:40:11.985] [ERROR] custom - Error: orders validation failed: total: Cast to Number failed for value "NaN" (type number) at path "total"
+    at ValidationError.inspect (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:782:19)
+    at inspect (node:internal/util/inspect:347:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2167:40)
+    at Object.format (node:internal/util/inspect:2021:10)
+    at basicLayout (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\log4js\lib\appenders\logLevelFilter.js:10:7
+    at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>) {
+  errors: {
+    total: CastError: Cast to Number failed for value "NaN" (type number) at path "total"
+        at SchemaNumber.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schema\number.js:378:11)
+        at SchemaNumber.SchemaType.applySetters (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1201:12)
+        at model.$set (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:1410:22)
+        at model.$set (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:1135:16)
+        at model.Document (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:166:12)
+        at model.Model (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:121:12)
+        at new model (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:5038:15)
+        at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:3187:22
+        at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:3222:7
+        at Array.forEach (<anonymous>) {
+      stringValue: '"NaN"',
+      messageFormat: undefined,
+      kind: 'Number',
+      value: NaN,
+      path: 'total',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(!isNaN(val))
+      
+          at castNumber (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast\number.js:27:10)
+          at SchemaNumber.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schema\number.js:376:12)
+          at SchemaNumber.SchemaType.applySetters (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1201:12)
+          at model.$set (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:1410:22)
+          at model.$set (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:1135:16)
+          at model.Document (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\document.js:166:12)
+          at model.Model (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:121:12)
+          at new model (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:5038:15)
+          at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:3187:22
+          at C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\model.js:3222:7 {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'number'
+    }
+  },
+  _message: 'orders validation failed'
+}

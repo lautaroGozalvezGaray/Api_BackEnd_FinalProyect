@@ -21,7 +21,10 @@ const Orderschema = new Schema({
     email:{
         type:String,
         required: [true, 'El email es obligatorio']
-    }
+    },
+    total:{
+        type: Number,
+    },
 })
 
 module.exports = model("orders", Orderschema);

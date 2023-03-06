@@ -1,5 +1,7 @@
 const logger = require("../../utils/Log4js");
 const mongoose = require('mongoose');
+const minimist = require("minimist");
+
 
 module.exports = class MongoDbContainer{
     constructor(model){
@@ -9,11 +11,21 @@ module.exports = class MongoDbContainer{
 
     async connect(){
         try {
-            mongoose.connect(process.env.MONGO_URL_DB, {useNewUrlParser: true, useUnifiedTopology: true, })
+            const options = {
+                alias: {
+                    "b": "BASE"
+                },
+                default: {
+                    "BASE": process.env.MONGO_URL_DB
+                }
+            };
+
+            const { BASE } = minimist(process.argv.slice(3), options);
+
+            mongoose.connect(BASE, {useNewUrlParser: true, useUnifiedTopology: true, })
             logger.info("base de datos conectada")
         } catch (error) {
-            logger.error("you need to login");
-            throw new Error('Error a la hora de iniciar la base de datos');
+            logger.error('Error a la hora de iniciar la base de datos');
         }
         
     }
