@@ -18,12 +18,30 @@ const productsGet = async(req, res) =>{
     }
 }
 
+
+const getProductByCategory = async(req,res) => {
+    try{
+
+        const { cat } = req.params;
+        
+        const products = await contenedor.getAll();
+
+        const filteredProducts = products.filter((product) => product.categoria === cat);
+
+
+        filteredProducts.length>0 ? res.status(200).json(filteredProducts) : res.status(404).json(message = `The products whit category: ${cat} was not found`);
+
+    }catch(error){
+        return res.status(500).send(logger.error(`${error}`))
+    }
+}
+
 const productsGetById = async(req, res) =>{
     try {
         const product = await contenedor.getById(req.params.id);
         product 
           ? res.status(200).json(product)
-          : res.status(404).send(logger.error(`The product whit ID: ${id} was not found`));
+          : res.status(404).json(message = `The product whit ID: ${id} was not found`);
 
     } catch (error) {
         return res.status(500).send(logger.error(`${error}`))
@@ -94,4 +112,4 @@ const updateProducts = async(req, res) =>{
 }
 
 
-module.exports = {productsGet, productsGetById, addProducts, deleteProducts, updateProducts}
+module.exports = {productsGet, productsGetById, addProducts, deleteProducts, updateProducts, getProductByCategory}

@@ -11,6 +11,9 @@ const productsSchema = new Schema({
     },
     thumbnail: {
         type: String,
+    },
+    categoria:{
+        type: String,
     }
 })
 

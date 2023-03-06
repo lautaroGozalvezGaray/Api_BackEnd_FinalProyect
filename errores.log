@@ -1,0 +1,246 @@
+[2023-03-06T15:28:23.223] [ERROR] custom - CastError: Cast to ObjectId failed for value "utiles" (type string) at path "_id" for model "products"
+    at model.Query.exec (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4891:21)
+    at model.Query.Query.then (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4990:15) {
+  messageFormat: undefined,
+  stringValue: '"utiles"',
+  kind: 'ObjectId',
+  value: 'utiles',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:5319:12),
+  valueType: 'string'
+}
+[2023-03-06T15:28:23.229] [ERROR] custom - ReferenceError: id is not defined
+[2023-03-06T15:29:00.700] [ERROR] custom - CastError: Cast to ObjectId failed for value "utiles" (type string) at path "_id" for model "products"
+    at model.Query.exec (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4891:21)
+    at model.Query.Query.then (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4990:15) {
+  messageFormat: undefined,
+  stringValue: '"utiles"',
+  kind: 'ObjectId',
+  value: 'utiles',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:5319:12),
+  valueType: 'string'
+}
+[2023-03-06T15:29:00.703] [ERROR] custom - ReferenceError: id is not defined
+[2023-03-06T15:30:29.870] [ERROR] custom - CastError: Cast to ObjectId failed for value "utiles" (type string) at path "_id" for model "products"
+    at model.Query.exec (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4891:21)
+    at model.Query.Query.then (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4990:15) {
+  messageFormat: undefined,
+  stringValue: '"utiles"',
+  kind: 'ObjectId',
+  value: 'utiles',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:5319:12),
+  valueType: 'string'
+}
+[2023-03-06T15:30:29.874] [ERROR] custom - ReferenceError: id is not defined
+[2023-03-06T15:31:27.372] [ERROR] custom - CastError: Cast to ObjectId failed for value "utiles" (type string) at path "_id" for model "products"
+    at model.Query.exec (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4891:21)
+    at model.Query.Query.then (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4990:15) {
+  messageFormat: undefined,
+  stringValue: '"utiles"',
+  kind: 'ObjectId',
+  value: 'utiles',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:5319:12),
+  valueType: 'string'
+}
+[2023-03-06T15:31:27.375] [ERROR] custom - ReferenceError: id is not defined
+[2023-03-06T15:32:54.963] [ERROR] custom - CastError: Cast to ObjectId failed for value "utiles" (type string) at path "_id" for model "products"
+    at model.Query.exec (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4891:21)
+    at model.Query.Query.then (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4990:15) {
+  messageFormat: undefined,
+  stringValue: '"utiles"',
+  kind: 'ObjectId',
+  value: 'utiles',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:5319:12),
+  valueType: 'string'
+}
+[2023-03-06T15:32:54.967] [ERROR] custom - ReferenceError: id is not defined
+[2023-03-06T15:33:09.001] [ERROR] custom - CastError: Cast to ObjectId failed for value "utiles" (type string) at path "_id" for model "products"
+    at model.Query.exec (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4891:21)
+    at model.Query.Query.then (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4990:15) {
+  messageFormat: undefined,
+  stringValue: '"utiles"',
+  kind: 'ObjectId',
+  value: 'utiles',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:5319:12),
+  valueType: 'string'
+}
+[2023-03-06T15:33:09.005] [ERROR] custom - ReferenceError: id is not defined
+[2023-03-06T15:35:12.436] [ERROR] custom - CastError: Cast to ObjectId failed for value "utiles" (type string) at path "_id" for model "products"
+    at model.Query.exec (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4891:21)
+    at model.Query.Query.then (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4990:15) {
+  messageFormat: undefined,
+  stringValue: '"utiles"',
+  kind: 'ObjectId',
+  value: 'utiles',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:5319:12),
+  valueType: 'string'
+}
+[2023-03-06T15:35:12.441] [ERROR] custom - ReferenceError: id is not defined
+[2023-03-06T15:35:40.855] [ERROR] custom - CastError: Cast to ObjectId failed for value "utiles" (type string) at path "_id" for model "products"
+    at model.Query.exec (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4891:21)
+    at model.Query.Query.then (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4990:15) {
+  messageFormat: undefined,
+  stringValue: '"utiles"',
+  kind: 'ObjectId',
+  value: 'utiles',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:5319:12),
+  valueType: 'string'
+}
+[2023-03-06T15:35:40.861] [ERROR] custom - ReferenceError: id is not defined
+[2023-03-06T15:37:16.138] [ERROR] custom - CastError: Cast to ObjectId failed for value "utiles" (type string) at path "_id" for model "products"
+    at model.Query.exec (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4891:21)
+    at model.Query.Query.then (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4990:15) {
+  messageFormat: undefined,
+  stringValue: '"utiles"',
+  kind: 'ObjectId',
+  value: 'utiles',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:5319:12),
+  valueType: 'string'
+}
+[2023-03-06T15:37:16.142] [ERROR] custom - ReferenceError: id is not defined
+[2023-03-06T15:38:51.078] [ERROR] custom - CastError: Cast to ObjectId failed for value "utiles" (type string) at path "_id" for model "products"
+    at model.Query.exec (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4891:21)
+    at model.Query.Query.then (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4990:15) {
+  messageFormat: undefined,
+  stringValue: '"utiles"',
+  kind: 'ObjectId',
+  value: 'utiles',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:5319:12),
+  valueType: 'string'
+}
+[2023-03-06T15:38:51.082] [ERROR] custom - ReferenceError: id is not defined
+[2023-03-06T15:38:58.483] [ERROR] custom - CastError: Cast to ObjectId failed for value ":utiles" (type string) at path "_id" for model "products"
+    at model.Query.exec (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4891:21)
+    at model.Query.Query.then (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:4990:15) {
+  messageFormat: undefined,
+  stringValue: '":utiles"',
+  kind: 'ObjectId',
+  value: ':utiles',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (C:\Users\lauta\OneDrive\Documentos\Programacion\Api_BackEnd_FinalProyect\node_modules\mongoose\lib\query.js:5319:12),
+  valueType: 'string'
+}
+[2023-03-06T15:38:58.487] [ERROR] custom - ReferenceError: id is not defined
+[2023-03-06T15:40:20.655] [ERROR] custom - ReferenceError: categoria is not defined
+[2023-03-06T15:41:16.356] [ERROR] custom - ReferenceError: Product is not defined
+[2023-03-06T15:41:35.122] [ERROR] custom - TypeError: contenedor.find is not a function
+[2023-03-06T15:42:29.287] [ERROR] custom - TypeError: contenedor.find is not a function
